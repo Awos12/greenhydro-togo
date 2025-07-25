@@ -1,0 +1,167 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+header {
+  background: #0a3d62;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+select {
+  padding: 5px;
+}
+
+main {
+  padding: 20px;
+  background: white;
+}
+
+footer {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* ==== Styles pour le diaporama de fond ==== */
+#slideshow {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  transition: background-image 1s ease-in-out;
+  z-index: -1;
+}
+/* ----------- Scroll section par section ----------- */
+
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  padding: 2em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* Scroll vertical section par section */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;  /* Autoriser le défilement normal */
+}
+
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  min-height: 100vh;  /* corrige le problème */
+  scroll-behavior: smooth;
+  position: relative;
+  z-index: 1;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Fond diaporama déjà existant */
+.snap-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  animation: slideshow 20s infinite;
+  opacity: 0.3; /* assombrit le fond */
+}
+
+/* Cadre blanc centré avec ombre */
+.section-content {
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 800px;
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  opacity: 0.95;
+}
+.slideshow-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.slideshow-background .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.slideshow-background .slide.active {
+  opacity: 1;
+}
+footer .social-links img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+  vertical-align: middle;
+  object-fit: contain;
+}
