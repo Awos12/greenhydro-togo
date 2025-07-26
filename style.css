@@ -167,7 +167,7 @@ footer .social-links img {
   vertical-align: middle;
   object-fit: contain;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 100px) {
   nav ul {
     flex-direction: column;
     background: #0a3d62;
