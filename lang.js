@@ -52,10 +52,21 @@ const images = [
   'images/fond9.png'
   // Ajoute autant d'images que tu veux
 ];
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-  const menu = document.querySelector('header nav ul');
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('header nav ul');
+
+menuToggle.addEventListener('click', function(e) {
+  e.stopPropagation(); // empêche le clic de se propager
   menu.classList.toggle('show');
 });
+
+// Fermer le menu quand on clique n'importe où en dehors
+document.addEventListener('click', function(e) {
+  if (menu.classList.contains('show') && !menu.contains(e.target) && e.target !== menuToggle) {
+    menu.classList.remove('show');
+  }
+});
+
 
 let index = 0;
 const slideshow = document.getElementById('slideshow');
