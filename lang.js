@@ -60,13 +60,19 @@ menuToggle.addEventListener('click', function(e) {
   menu.classList.toggle('show');
 });
 
-// Fermer le menu quand on clique n'importe où en dehors
+/* Fermer le menu quand on clique en dehors */
 document.addEventListener('click', function(e) {
   if (menu.classList.contains('show') && !menu.contains(e.target) && e.target !== menuToggle) {
     menu.classList.remove('show');
   }
 });
 
+/* Fermer le menu quand on scroll en dehors */
+document.addEventListener('scroll', function() {
+  if (menu.classList.contains('show')) {
+    menu.classList.remove('show');
+  }
+}, true);
 
 let index = 0;
 const slideshow = document.getElementById('slideshow');
