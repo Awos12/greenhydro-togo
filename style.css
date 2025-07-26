@@ -165,6 +165,27 @@ footer .social-links img {
   vertical-align: middle;
   object-fit: contain;
 }
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+nav ul {
+  display: none; /* Caché par défaut */
+}
+
+nav ul.show {
+  display: flex;              /* Affiché quand on clique */
+  flex-direction: column;     /* En colonne (vertical) */
+  background: #0a3d62;        /* Même couleur que le header */
+  position: absolute;         /* S'affiche par-dessus */
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+}
+
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
