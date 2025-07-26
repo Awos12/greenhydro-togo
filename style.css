@@ -186,24 +186,29 @@ nav ul.show {
   display: flex;
   flex-direction: column;
   background: #0a3d62;
-  position: fixed;
-  top: 60px;          /* en dessous du header */
+  position: absolute;     /* plus fixed */
+  top: 60px;              /* juste en dessous du header */
   left: 0;
   width: 250px;
-  height: calc(100% - 60px);
   padding: 10px 0;
-  z-index: 1100;
+  z-index: 999;
+  height: auto;           /* limité aux éléments */
+  border-bottom: 2px solid #fff; /* optionnel : ligne de fin */
 }
 
+
 @media screen and (min-width: 768px) {
-  /* Sur PC, le menu horizontal est visible par défaut */
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    background: transparent;
+  nav ul.show {
+    flex-direction: column;
+    background: #0a3d62;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 250px;
     height: auto;
   }
+}
+
 
   /* Quand on clique sur ☰ sur PC : menu vertical à gauche */
   nav ul.show {
