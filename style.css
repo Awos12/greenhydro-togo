@@ -168,7 +168,7 @@ footer .social-links img {
   object-fit: contain;
 }
 
-/* ☰ visible partout */
+/* Bouton ☰ visible partout */
 .menu-toggle {
   display: block;
   cursor: pointer;
@@ -176,28 +176,27 @@ footer .social-links img {
   color: white;
   z-index: 1100;
 }
-
 /* Menu caché par défaut */
 nav ul {
   display: none;
 }
 
-/* Menu affiché quand on clique sur ☰ (mode vertical sur mobile ET PC) */
+/* Menu affiché quand on clique sur ☰ : vertical à gauche */
 nav ul.show {
   display: flex;
   flex-direction: column;
   background: #0a3d62;
   position: fixed;
-  top: 60px;
+  top: 60px;          /* en dessous du header */
   left: 0;
   width: 250px;
-  height: calc(100% - 60px); /* plein écran en hauteur */
+  height: calc(100% - 60px);
   padding: 10px 0;
   z-index: 999;
 }
 
 @media screen and (min-width: 768px) {
-  /* Par défaut sur PC, le menu est horizontal et visible */
+  /* Sur PC, le menu horizontal est visible par défaut */
   nav ul {
     display: flex;
     flex-direction: row;
@@ -206,11 +205,9 @@ nav ul.show {
     height: auto;
   }
 
-  /* Quand on clique sur ☰ sur PC : 
-     - le menu devient vertical à gauche (class .show déjà définie)
-     - pas besoin de changer la logique, on utilise nav ul.show du dessus */
+  /* Quand on clique sur ☰ sur PC : menu vertical à gauche */
   nav ul.show {
-    flex-direction: column; /* vertical */
+    flex-direction: column;
     background: #0a3d62;
     position: fixed;
     top: 60px;
