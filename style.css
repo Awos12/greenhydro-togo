@@ -167,31 +167,50 @@ footer .social-links img {
   vertical-align: middle;
   object-fit: contain;
 }
-@media screen and (max-width: 768px) {
+/* ☰ visible partout */
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  z-index: 1100;
+}
+
+/* Menu caché par défaut */
+nav ul {
+  display: none;
+}
+
+/* Menu affiché quand on clique sur ☰ */
+nav ul.show {
+  display: flex;
+  flex-direction: column;
+  background: #0a3d62;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 250px;
+  padding: 10px 0;
+  z-index: 999;
+}
+@media screen and (min-width: 768px) {
+  /* Sur PC, le menu est affiché en horizontal par défaut */
   nav ul {
-    flex-direction: column;
-    background: #0a3d62;
-    position: absolute;
-    top: 60px; /* sous le header */
-    left: 0;
-    width: 100%;
-    display: none; /* caché par défaut */
-    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: transparent;
   }
 
+  /* Quand on clique sur ☰ sur PC, on peut cacher/réafficher le menu */
   nav ul.show {
-    display: flex; /* affichage quand activé */
+    flex-direction: row;
+    position: static;
+    background: transparent;
   }
 
-  nav ul li {
-    text-align: center;
-    margin: 10px 0;
-  }
-
+  /* ☰ reste visible sur PC */
   .menu-toggle {
     display: block;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
   }
 }
