@@ -167,7 +167,6 @@ footer .social-links img {
   vertical-align: middle;
   object-fit: contain;
 }
-
 /* Bouton ☰ visible partout */
 .menu-toggle {
   display: block;
@@ -176,48 +175,48 @@ footer .social-links img {
   color: white;
   z-index: 1100;
 }
+
 /* Menu caché par défaut */
 nav ul {
   display: none;
 }
 
-/* Menu affiché quand on clique sur ☰ : vertical à gauche */
+/* Menu vertical (mobile et PC quand ☰ cliqué) */
 nav ul.show {
   display: flex;
   flex-direction: column;
   background: #0a3d62;
-  position: absolute;     /* plus fixed */
-  top: 60px;              /* juste en dessous du header */
-  left: 0;
+  position: absolute;
+  top: 60px;                 /* en dessous du header */
+  left: 10px;                /* léger décalage pour un cadre */
   width: 250px;
   padding: 10px 0;
   z-index: 999;
-  height: auto;           /* limité aux éléments */
-  border-bottom: 2px solid #fff; /* optionnel : ligne de fin */
+  height: auto;              /* limité à la taille du contenu */
+  border-radius: 8px;        /* arrondi du cadre */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* ombre */
 }
 
 
 @media screen and (min-width: 768px) {
+  /* Par défaut sur PC : menu horizontal visible */
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: transparent;
+  }
+
+  /* Quand ☰ cliqué sur PC : menu vertical à gauche */
   nav ul.show {
     flex-direction: column;
     background: #0a3d62;
     position: absolute;
     top: 60px;
-    left: 0;
+    left: 10px;
     width: 250px;
     height: auto;
-  }
-}
-
-
-  /* Quand on clique sur ☰ sur PC : menu vertical à gauche */
-  nav ul.show {
-    flex-direction: column;
-    background: #0a3d62;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    width: 250px;
-    height: calc(100% - 60px);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   }
 }
