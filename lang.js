@@ -52,6 +52,9 @@ const images = [
   'images/fond9.png'
   // Ajoute autant d'images que tu veux
 ];
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+  document.querySelector('nav ul').classList.toggle('show');
+});
 
 let index = 0;
 const slideshow = document.getElementById('slideshow');
