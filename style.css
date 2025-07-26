@@ -13,7 +13,7 @@ html {
 
 header {
   background: #0a3d62;
-  color: white;
+  color: none;
   padding: 10px 20px;
   display: flex;
   align-items: center;
