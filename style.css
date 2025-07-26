@@ -192,7 +192,7 @@ nav ul.show {
   width: 250px;
   height: calc(100% - 60px);
   padding: 10px 0;
-  z-index: 999;
+  z-index: 1100;
 }
 
 @media screen and (min-width: 768px) {
