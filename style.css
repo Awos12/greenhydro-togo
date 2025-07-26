@@ -68,7 +68,7 @@ footer {
 /* ----------- Scroll section par section ----------- */
 
 .scroll-container {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   overflow-y: scroll;
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -92,7 +92,7 @@ html, body {
 }
 
 .scroll-container {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   overflow-y: scroll;
   min-height: 100vh;  /* corrige le problème */
   scroll-behavior: smooth;
