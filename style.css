@@ -18,6 +18,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;    /* Ajoute cette ligne */
+  z-index: 1000;         /* Ajoute cette ligne */
 }
 
 .logo {
