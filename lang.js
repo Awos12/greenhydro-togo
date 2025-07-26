@@ -53,7 +53,8 @@ const images = [
   // Ajoute autant d'images que tu veux
 ];
 document.querySelector('.menu-toggle').addEventListener('click', function() {
-  document.querySelector('nav ul').classList.toggle('show');
+  const menu = document.querySelector('header nav ul');
+  menu.classList.toggle('show');
 });
 
 let index = 0;
