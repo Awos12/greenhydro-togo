@@ -17,7 +17,7 @@ const translations = {
 		pub:"Nos Publications",
 		tel:"Télécharger une étude",
 		video1:"Voir la vidéo explicative1",
-		video2: "Hydrogène, la révolution verte ? | Documentaire"
+		video2: "Hydrogène, la révolution verte ? | Documentaire",
 	        partenaire:"Testimonials / Partners",
 	        develop:"Partenaires et clients satisfaits..."
 		},
