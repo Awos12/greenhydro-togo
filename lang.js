@@ -18,6 +18,8 @@ const translations = {
 		tel:"Télécharger une étude",
 		video1:"Voir la vidéo explicative1",
 		video2: "Hydrogène, la révolution verte ? | Documentaire"
+	        partenaire:"Testimonials / Partners",
+	        develop:"Partenaires et clients satisfaits..."
 		},
     en: {
         home: "Home",
@@ -36,7 +38,10 @@ const translations = {
 		pub:"Our Publications",
 		tel: "Download a study",
 		video1: "Watch the explanatory video1",
-		video2: "Hydrogen: The Green Revolution? | Documentary"
+		video2: "Hydrogen: The Green Revolution? | Documentary",
+	    partenaire:"Testimonials / Partners",
+	    develop:"Trusted partners and satisfied"
+	    
 		}		
 };
 // === Diaporama d'images en fond ===
